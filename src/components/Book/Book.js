@@ -74,7 +74,7 @@ const SingleBook = ({ book, useFor }) => {
               className={styles.check_icon} />
           }
 
-          {!isFinised &&
+          {!isFinised && !existed &&
 
             <HiCheckCircle
               onClick={() => {
