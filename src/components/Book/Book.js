@@ -4,6 +4,7 @@ import {
   HiMinusCircle,
   HiCheckCircle
 } from 'react-icons/hi';
+import { AiOutlineFileDone } from 'react-icons/ai'
 import toast, { Toaster } from 'react-hot-toast';
 import { useDispatch, useSelector } from "react-redux";
 import { addToFinishedList, addToReadingList, removeFromReadingList } from "../../Redux/Actions/BookActions";
@@ -67,13 +68,13 @@ const SingleBook = ({ book, useFor }) => {
             </>
           }
           {existed &&
-            <HiCheckCircle
+            <AiOutlineFileDone
               title="You have Finished"
               onClick={() => toast.error("You have already finished the book")}
               className={styles.check_icon} />
           }
 
-          {!isFinised && useFor === 'reading' &&
+          {!isFinised &&
 
             <HiCheckCircle
               onClick={() => {
