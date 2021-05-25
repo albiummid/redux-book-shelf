@@ -48,7 +48,7 @@ const SingleBook = ({ book, useFor }) => {
         <div className={styles.control_icons} >
 
           {useFor === 'discover' && !existed &&
-            <div>
+            <>
               {isCliked ?
                 <HiMinusCircle onClick={() => {
                   dispatch(removeFromReadingList(book));
@@ -64,7 +64,7 @@ const SingleBook = ({ book, useFor }) => {
                   toast.success('Added to reading list')
                 }} title="Add to Reading" className={styles.plus_icon} />
               }
-            </div>
+            </>
           }
           {existed &&
             <HiCheckCircle
